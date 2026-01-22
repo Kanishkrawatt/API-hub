@@ -1,3 +1,98 @@
+# API Hub (Next.js App Router) — GitHub Markdown CMS
+
+This is a production-ready **SEO-first API discovery platform** where each API is a Markdown file with validated frontmatter.
+
+## Content model
+
+Content is stored in-repo (and can be edited via GitHub commits):
+
+- `content/apis/[slug]/page.md`
+- `content/apis/[slug]/openapi.(json|yaml|yml)` (optional; used for API docs section)
+- `content/categories/[category].md`
+- `content/top-lists/[slug].md` (optional / curated)
+
+### API frontmatter schema (`content/apis/*.md`)
+
+Required fields (validated with Zod at build/runtime):
+
+- `title`
+- `product_name`
+- `category`
+- `primary_keyword`
+- `secondary_keywords` (array)
+- `description`
+- `pricing_free_tier` (boolean)
+- `pricing_starting_from`
+- `pricing_notes`
+- `auth_type` (`api_key` | `oauth2` | `basic` | `bearer` | `session_cookie` | `none`)
+- `rate_limits`
+- `docs_url` (url)
+- `pricing_url` (url)
+- `alternatives` (array)
+- `last_verified_date`
+- `faq` (optional array of `{ q, a }`)
+
+## Routes
+
+- **API detail**: `/api-hub/[slug]`
+- **Category**: `/api-hub/category/[category]`
+- **Top X page**: `/api-hub/[category]/top-[x]-apis`
+  - Implemented internally at `/api-hub/[category]/top/[x]` with a rewrite for the clean SEO URL (see `next.config.ts`).
+
+## SEO features
+
+- Dynamic metadata (`generateMetadata`)
+- JSON-LD:
+  - Breadcrumbs
+  - `WebAPI`
+  - `FAQPage` (when FAQ exists)
+  - `ItemList` (category + top pages)
+- `app/sitemap.ts` → `/sitemap.xml`
+- `app/robots.ts` → `/robots.txt`
+
+## ISR + webhook revalidation
+
+All content pages use ISR (`export const revalidate = 3600`).
+
+For **on-demand revalidation** (e.g. on GitHub commits), call:
+
+- `POST /api/revalidate`
+
+Provide the secret via:
+
+- Header: `x-revalidate-secret: <secret>`
+  - OR query param: `?secret=<secret>`
+
+Body example:
+
+```json
+{
+  "paths": ["/api-hub", "/api-hub/openai", "/api-hub/category/ai"],
+  "tags": ["content", "apis", "categories"]
+}
+```
+
+Environment variables:
+
+- `REVALIDATE_SECRET`: required for `/api/revalidate`
+- `NEXT_PUBLIC_SITE_URL`: used for canonical URLs and sitemap base
+
+## CSV import (generate Markdown files)
+
+To generate `content/apis/*.md` from a CSV:
+
+```bash
+npm run import:apis:csv -- ./data/apis.csv
+```
+
+See `scripts/import-apis-from-csv.ts` for expected columns.
+
+## Dev
+
+```bash
+npm run dev
+```
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
