@@ -9,42 +9,6 @@ import { ApiInfiniteScroll } from "@/components/ApiInfiniteScroll.client";
 
 export const revalidate = 3600;
 
-const categoryColors: Record<string, { gradient: string; badgeDark: string; badgeLight: string }> = {
-  ai: { 
-    gradient: "from-purple-500/15 to-purple-500/5", 
-    badgeDark: "bg-purple-950/50 text-purple-400 border-purple-800/30",
-    badgeLight: "bg-purple-100 text-purple-700 border-purple-300"
-  },
-  payments: { 
-    gradient: "from-emerald-500/15 to-emerald-500/5", 
-    badgeDark: "bg-emerald-950/50 text-emerald-400 border-emerald-800/30",
-    badgeLight: "bg-emerald-100 text-emerald-700 border-emerald-300"
-  },
-  communication: { 
-    gradient: "from-blue-500/15 to-blue-500/5", 
-    badgeDark: "bg-blue-950/50 text-blue-400 border-blue-800/30",
-    badgeLight: "bg-blue-100 text-blue-700 border-blue-300"
-  },
-  data: { 
-    gradient: "from-orange-500/15 to-orange-500/5", 
-    badgeDark: "bg-orange-950/50 text-orange-400 border-orange-800/30",
-    badgeLight: "bg-orange-100 text-orange-700 border-orange-300"
-  },
-  auth: { 
-    gradient: "from-cyan-500/15 to-cyan-500/5", 
-    badgeDark: "bg-cyan-950/50 text-cyan-400 border-cyan-800/30",
-    badgeLight: "bg-cyan-100 text-cyan-700 border-cyan-300"
-  },
-};
-
-const getCategoryColor = (category: string) => {
-  return categoryColors[category] || { 
-    gradient: "from-zinc-500/15 to-zinc-500/5", 
-    badgeDark: "bg-zinc-800 text-zinc-100 border-zinc-700",
-    badgeLight: "bg-zinc-200 text-zinc-700 border-zinc-400"
-  };
-};
-
 export default async function ApiHubIndexPage() {
   const [apis, categories] = await Promise.all([getAllApis(), getAllCategories()]);
   const categoriesWithTitles = await Promise.all(
@@ -54,23 +18,36 @@ export default async function ApiHubIndexPage() {
         slug: c,
         title: entry?.frontmatter.title ?? c,
         description: entry?.frontmatter.description ?? "",
-        colors: getCategoryColor(c),
+        colors: {
+          gradient: entry?.frontmatter.gradient ?? "from-zinc-500/15 to-zinc-500/5",
+          badgeDark: entry?.frontmatter.badge_dark ?? "bg-zinc-800 text-zinc-100 border-zinc-700",
+          badgeLight: entry?.frontmatter.badge_light ?? "bg-zinc-200 text-zinc-700 border-zinc-400",
+        },
       };
     }),
   );
 
   // Prepare APIs with colors and spec info for client component
-  const apisWithMetadata = apis.map((api) => ({
-    slug: api.slug,
-    frontmatter: {
-      title: api.frontmatter.title,
-      description: api.frontmatter.description,
-      category: api.frontmatter.category,
-      logo: api.frontmatter.logo,
-    },
-    colors: getCategoryColor(api.frontmatter.category),
-    hasSpec: hasOpenApiSpec(api.slug),
-  }));
+  const apisWithMetadata = await Promise.all(
+    apis.map(async (api) => {
+      const categoryEntry = await getCategoryBySlug(api.frontmatter.category);
+      return {
+        slug: api.slug,
+        frontmatter: {
+          title: api.frontmatter.title,
+          description: api.frontmatter.description,
+          category: api.frontmatter.category,
+          logo: api.frontmatter.logo,
+        },
+        colors: {
+          gradient: categoryEntry?.frontmatter.gradient ?? "from-zinc-500/15 to-zinc-500/5",
+          badgeDark: categoryEntry?.frontmatter.badge_dark ?? "bg-zinc-800 text-zinc-100 border-zinc-700",
+          badgeLight: categoryEntry?.frontmatter.badge_light ?? "bg-zinc-200 text-zinc-700 border-zinc-400",
+        },
+        hasSpec: hasOpenApiSpec(api.slug),
+      };
+    })
+  );
 
   return (
     <main className="relative overflow-hidden pb-12">

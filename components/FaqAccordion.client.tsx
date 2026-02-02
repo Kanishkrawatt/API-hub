@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 interface FaqItem {
   q: string;
@@ -21,16 +22,11 @@ export function FaqAccordion({ faqs }: { faqs: FaqItem[] }) {
             <span className="font-semibold text-foreground leading-relaxed">
               {faq.q}
             </span>
-            <svg
+            <ChevronDown
               className={`h-5 w-5 shrink-0 text-muted-foreground transition-transform ${
                 openIndex === index ? "rotate-180" : ""
               }`}
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
+            />
           </button>
           {openIndex === index && (
             <div className="pb-4 text-sm text-muted-foreground leading-relaxed">

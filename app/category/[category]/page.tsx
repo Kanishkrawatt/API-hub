@@ -13,43 +13,6 @@ import Image from "next/image";
 
 export const revalidate = 3600;
 
-const categoryColors: Record<string, { gradient: string; badgeDark: string; badgeLight: string }> = {
-  ai: { 
-    gradient: "from-purple-500/15 to-purple-500/5", 
-    badgeDark: "bg-purple-950/50 text-purple-400 border-purple-800/30",
-    badgeLight: "bg-purple-100 text-purple-700 border-purple-300"
-  },
-  payments: { 
-    gradient: "from-emerald-500/15 to-emerald-500/5", 
-    badgeDark: "bg-emerald-950/50 text-emerald-400 border-emerald-800/30",
-    badgeLight: "bg-emerald-100 text-emerald-700 border-emerald-300"
-  },
-  communication: { 
-    gradient: "from-blue-500/15 to-blue-500/5", 
-    badgeDark: "bg-blue-950/50 text-blue-400 border-blue-800/30",
-    badgeLight: "bg-blue-100 text-blue-700 border-blue-300"
-  },
-  data: { 
-    gradient: "from-orange-500/15 to-orange-500/5", 
-    badgeDark: "bg-orange-950/50 text-orange-400 border-orange-800/30",
-    badgeLight: "bg-orange-100 text-orange-700 border-orange-300"
-  },
-  auth: { 
-    gradient: "from-cyan-500/15 to-cyan-500/5", 
-    badgeDark: "bg-cyan-950/50 text-cyan-400 border-cyan-800/30",
-    badgeLight: "bg-cyan-100 text-cyan-700 border-cyan-300"
-  },
-};
-
-
-const getCategoryColor = (category: string) => {
-  return categoryColors[category] || { 
-    gradient: "from-zinc-500/15 to-zinc-500/5", 
-    badgeDark: "bg-zinc-800 text-zinc-100 border-zinc-700",
-    badgeLight: "bg-zinc-200 text-zinc-700 border-zinc-400"
-  };
-};
-
 export async function generateStaticParams() {
   const categories = await getAllCategories();
   return categories.map((category) => ({ category }));
@@ -98,6 +61,13 @@ export default async function CategoryPage({
   if (free === "1") apis = apis.filter((a) => a.frontmatter.pricing_free_tier);
   if (free === "0") apis = apis.filter((a) => !a.frontmatter.pricing_free_tier);
 
+  // Get category colors from metadata
+  const categoryColors = {
+    gradient: entry.frontmatter.gradient ?? "from-zinc-500/15 to-zinc-500/5",
+    badgeDark: entry.frontmatter.badge_dark ?? "bg-zinc-800 text-zinc-100 border-zinc-700",
+    badgeLight: entry.frontmatter.badge_light ?? "bg-zinc-200 text-zinc-700 border-zinc-400",
+  };
+
   return (
     <main className="relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -121,7 +91,7 @@ export default async function CategoryPage({
 
         <section className="rounded-b-3xl border-b border-border/60 bg-gradient-to-br from-background via-muted to-background p-8 pt-14 shadow-lg backdrop-blur-sm">
           <div className="text-sm text-muted-foreground">
-            <Link href="/api-hub" className="hover:text-foreground">
+            <Link href="/" className="hover:text-foreground">
               API Hub
             </Link>{" "}
             / <span>{entry.frontmatter.title || category}</span>
@@ -154,16 +124,14 @@ export default async function CategoryPage({
             </div>
             <CategoryFiltersClient />
           </div>
-
-           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {apis.map((api) => {
-              const colors = getCategoryColor(api.frontmatter.category);
               return (
                 <div key={api.slug} className="group">
                   <Card className="relative flex h-full flex-col overflow-hidden border-border/60 bg-gradient-to-br from-card to-muted transition-all hover:-translate-y-1 hover:shadow-lg">
-                    <div className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${colors.gradient} opacity-0 transition group-hover:opacity-100`} />
+                    <div className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${categoryColors.gradient} opacity-0 transition group-hover:opacity-100`} />
                     <div className="absolute top-3 right-3 z-10">
-                      <Badge variant="outline" className={`border capitalize dark:${colors.badgeDark} ${colors.badgeLight}`}>
+                      <Badge variant="outline" className={`border capitalize dark:${categoryColors.badgeDark} ${categoryColors.badgeLight}`}>
                         {api.frontmatter.category}
                       </Badge>
                     </div>
@@ -219,13 +187,13 @@ export default async function CategoryPage({
             </CardHeader>
             <CardContent className="flex flex-wrap gap-3">
               <Link
-                href={`/api-hub/${category}/top-5-apis`}
+                href={`/${category}/top-5-apis`}
                 className="rounded-full border border-border/70 px-4 py-2 text-sm text-foreground transition hover:-translate-y-0.5 hover:bg-muted"
               >
                 Top 5 APIs
               </Link>
               <Link
-                href={`/api-hub/${category}/top-10-apis`}
+                href={`/${category}/top-10-apis`}
                 className="rounded-full border border-border/70 px-4 py-2 text-sm text-foreground transition hover:-translate-y-0.5 hover:bg-muted"
               >
                 Top 10 APIs

@@ -74,12 +74,12 @@ export default async function TopApisPage({
 
         <div className="flex flex-col gap-2">
           <div className="text-sm text-zinc-500 dark:text-zinc-400">
-            <Link href="/api-hub" className="hover:text-zinc-900 dark:hover:text-white">
+            <Link href="/" className="hover:text-zinc-900 dark:hover:text-white">
               API Hub
             </Link>{" "}
             /{" "}
             <Link
-              href={`/api-hub/category/${category}`}
+              href={`/category/${category}`}
               className="hover:text-zinc-900 dark:hover:text-white"
             >
               {cat.frontmatter.title || category}
@@ -109,7 +109,7 @@ export default async function TopApisPage({
                   <tr key={a.slug} className="border-t border-zinc-200 dark:border-zinc-800">
                     <td className="px-4 py-3">
                       <Link
-                        href={`/api-hub/${a.slug}`}
+                        href={`/${a.slug}`}
                         className="font-medium hover:underline"
                       >
                         {a.frontmatter.title}

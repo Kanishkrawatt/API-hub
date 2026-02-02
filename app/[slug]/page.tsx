@@ -12,6 +12,7 @@ import { FaqAccordion } from "@/components/FaqAccordion.client";
 import { getAllApiSlugs, getApiBySlug, getAllApis, hasOpenApiSpec } from "@/lib/content/fs";
 import { jsonLdBreadcrumbs, jsonLdFaq, jsonLdWebApi } from "@/lib/seo/jsonld";
 import { toSlug } from "@/lib/utils/slug";
+import { CheckCircle2 } from "lucide-react";
 
 export const revalidate = 3600;
 
@@ -64,17 +65,20 @@ export default async function ApiDetailPage({
   const allApis = await getAllApis();
   const apiSlugs = new Set(allApis.map(api => api.slug));
   const alternativesWithLinks = frontmatter.alternatives.map(alt => {
-    const altSlug = toSlug(alt);
+    const altName = typeof alt === 'string' ? alt : alt.name;
+    const altDocsUrl = typeof alt === 'string' ? undefined : alt.docs_url;
+    const altSlug = toSlug(altName);
     return {
-      name: alt,
+      name: altName,
       slug: altSlug,
-      exists: apiSlugs.has(altSlug)
+      exists: apiSlugs.has(altSlug),
+      docsUrl: altDocsUrl
     };
   });
 
   return (
     <main className="relative overflow-hidden">
-     
+
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 h-96 w-96 rounded-full bg-purple-500/20 dark:bg-purple-500/20 blur-3xl" />
         <div className="absolute top-1/3 -left-20 h-80 w-80 rounded-full bg-blue-500/20 dark:bg-blue-500/20 blur-3xl" />
@@ -104,12 +108,12 @@ export default async function ApiDetailPage({
           <div className="flex items-start justify-between gap-4">
             <div className="flex-1">
               <div className="text-sm text-muted-foreground">
-                <Link href="/api-hub" className="hover:text-foreground">
+                <Link href="/" className="hover:text-foreground">
                   API Hub
                 </Link>{" "}
                 /{" "}
                 <Link
-                  href={`/api-hub/category/${frontmatter.category}`}
+                  href={`/category/${frontmatter.category}`}
                   className="hover:text-foreground"
                 >
                   {frontmatter.category}
@@ -135,9 +139,7 @@ export default async function ApiDetailPage({
               <div className="flex items-center gap-2 rounded-lg border border-border bg-muted px-3 py-2 backdrop-blur-sm">
                 <span className="text-xs font-medium text-muted-foreground">Verified</span>
                 <div className="ml-auto flex items-center gap-1.5">
-                  <svg className="h-4 w-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
+                  <CheckCircle2 className="h-4 w-4 text-blue-400" />
                   <span className="text-xs font-medium text-foreground">
                     {frontmatter.last_verified_date}
                   </span>
@@ -182,7 +184,9 @@ export default async function ApiDetailPage({
               <div className="space-y-3">
                 <div className="flex items-center justify-between rounded-lg bg-muted px-4 py-3">
                   <span className="text-sm text-muted-foreground">Category</span>
-                  <Badge variant="outline" className="border-border text-foreground capitalize">
+                  <Badge variant="outline"
+                    className={`border-border text-foreground capitalize dark:${frontmatter.category_badge_dark} ${frontmatter.category_badge_light}`}
+                  >
                     {frontmatter.category}
                   </Badge>
                 </div>
@@ -209,36 +213,7 @@ export default async function ApiDetailPage({
                   <span className="font-semibold text-foreground">{frontmatter.pricing_starting_from}</span>
                 </div>
               </div>
-              <div className="flex flex-col gap-2 pt-2 border-t border-border">
-                {frontmatter.docs_url && (
-                  <a
-                    href={frontmatter.docs_url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center justify-center rounded-lg bg-primary text-primary-foreground px-4 py-2.5 text-sm font-semibold transition hover:bg-primary/90"
-                  >
-                    Official Documentation
-                  </a>
-                )}
-                {hasOpenApiSpec(slug) && (
-                  <Link
-                    href={`/api-hub/${slug}/reference`}
-                    className="inline-flex items-center justify-center rounded-lg border border-border px-4 py-2.5 text-sm font-semibold text-foreground transition hover:bg-muted"
-                  >
-                    View API Reference
-                  </Link>
-                )}
-                {frontmatter.pricing_url && (
-                  <a
-                    href={frontmatter.pricing_url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center justify-center rounded-lg border border-border px-4 py-2.5 text-sm font-semibold text-foreground transition hover:bg-muted"
-                  >
-                    View Pricing
-                  </a>
-                )}
-              </div>
+              
             </CardContent>
           </Card>
 
@@ -255,7 +230,16 @@ export default async function ApiDetailPage({
         <section className="mt-10 grid gap-4 lg:grid-cols-2">
           <Card className="border-border/60 dark:bg-zinc-900/50">
             <CardHeader>
-              <CardTitle className="text-foreground">Pricing</CardTitle>
+              <div className="flex items-center justify-between">
+                <CardTitle className="text-foreground">Pricing</CardTitle>
+                {frontmatter.pricing_url && (
+                  <Button variant="outline" size="sm" asChild>
+                    <a href={frontmatter.pricing_url} target="_blank" rel="noreferrer">
+                      View Pricing
+                    </a>
+                  </Button>
+                )}
+              </div>
             </CardHeader>
             <CardContent className="overflow-hidden rounded-sm mx-4 border border-border p-0 mt-2">
               <table className="w-full text-sm">
@@ -314,14 +298,14 @@ export default async function ApiDetailPage({
                       <span className="text-sm font-medium text-foreground">{alt.name}</span>
                       {alt.exists ? (
                         <Link
-                          href={`/api-hub/${alt.slug}`}
+                          href={`/${alt.slug}`}
                           className="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition"
                         >
                           View in API Hub →
                         </Link>
-                      ) : frontmatter.docs_url ? (
+                      ) : alt.docsUrl ? (
                         <a
-                          href={frontmatter.docs_url}
+                          href={alt.docsUrl}
                           target="_blank"
                           rel="noreferrer"
                           className="text-xs font-semibold text-muted-foreground hover:text-foreground transition"
@@ -343,7 +327,17 @@ export default async function ApiDetailPage({
         <section className="mt-10 grid gap-4 lg:grid-cols-2">
           <Card className="border-border/60 dark:bg-zinc-900/50">
             <CardHeader>
-              <CardTitle className="text-foreground">Authentication & Limits</CardTitle>
+              <div className="flex items-center justify-between">
+                <CardTitle className="text-foreground">Authentication & Limits</CardTitle>
+
+                {frontmatter.docs_url && (
+                  <Button variant="outline" size="sm" asChild>
+                    <a href={frontmatter.docs_url} target="_blank" rel="noreferrer">
+                      View Docs
+                    </a>
+                  </Button>
+                )}
+              </div>
             </CardHeader>
             <CardContent className="space-y-6">
               <dl className="space-y-3 text-sm">
@@ -365,10 +359,6 @@ export default async function ApiDetailPage({
                       </a>
                     )}
                   </dd>
-                </div>
-                <div className="flex items-center justify-between">
-                  <dt className="text-muted-foreground">Last verified</dt>
-                  <dd className="font-medium text-foreground">{frontmatter.last_verified_date}</dd>
                 </div>
               </dl>
 

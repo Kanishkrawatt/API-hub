@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface Category {
   slug: string;
@@ -48,16 +49,7 @@ export function CategoryCarousel({ categories }: CategoryCarouselProps) {
           onClick={() => scroll("left")}
           className="absolute left-0 top-1/2 z-10 -translate-y-1/2 -translate-x-4 h-10 w-10 rounded-full border-border bg-background/90 backdrop-blur-sm shadow-lg hover:bg-muted"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={2}
-            stroke="currentColor"
-            className="h-5 w-5"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-          </svg>
+          <ChevronLeft className="h-5 w-5" />
         </Button>
       )}
       {canScrollRight && (
@@ -67,16 +59,7 @@ export function CategoryCarousel({ categories }: CategoryCarouselProps) {
           onClick={() => scroll("right")}
           className="absolute right-0 top-1/2 z-10 -translate-y-1/2 translate-x-4 h-10 w-10 rounded-full border-border bg-background/90 backdrop-blur-sm shadow-lg hover:bg-muted"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={2}
-            stroke="currentColor"
-            className="h-5 w-5"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-          </svg>
+          <ChevronRight className="h-5 w-5" />
         </Button>
       )}
 

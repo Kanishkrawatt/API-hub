@@ -197,6 +197,9 @@ export const getCategoryBySlug = unstable_cache(
       primary_keyword: category,
       description: apiWithMeta?.frontmatter.category_description || 
                    `Browse ${categoryApis.length} APIs in the ${category} category`,
+      gradient: apiWithMeta?.frontmatter.category_gradient || "from-zinc-500/15 to-zinc-500/5",
+      badge_dark: apiWithMeta?.frontmatter.category_badge_dark || "bg-zinc-800 text-zinc-100 border-zinc-700",
+      badge_light: apiWithMeta?.frontmatter.category_badge_light || "bg-zinc-200 text-zinc-700 border-zinc-400",
     };
 
     const contentMarkdown = ``;
