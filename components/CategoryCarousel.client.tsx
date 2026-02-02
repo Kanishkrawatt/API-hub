@@ -90,7 +90,7 @@ export function CategoryCarousel({ categories }: CategoryCarouselProps) {
         {categories.map((c) => (
             <Link
               key={c.slug}
-              href={`/api-hub/category/${c.slug}`}
+              href={`/category/${c.slug}`}
               className="group flex-shrink-0 w-[340px] snap-start"
             >
               <Card className="relative mt-2 flex h-full flex-col overflow-hidden border-border/60 bg-gradient-to-br from-card to-muted transition hover:-translate-y-1 hover:shadow-lg">

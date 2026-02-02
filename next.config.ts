@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  basePath: "/api-hub",
+  assetPrefix: "/api-hub",
+
   images: {
     remotePatterns: [
       {
@@ -9,12 +12,12 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+
   async rewrites() {
     return [
-      // Keep clean SEO URLs while implementing the handler under /top/[x]
       {
-        source: "/api-hub/:category/top-:x-apis",
-        destination: "/api-hub/category/:category/top/:x",
+        source: "/:category/top-:x-apis",
+        destination: "/category/:category/top/:x",
       },
     ];
   },

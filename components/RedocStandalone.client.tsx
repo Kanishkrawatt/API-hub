@@ -39,7 +39,7 @@ export function RedocStandalone({ spec, slug, title }: RedocStandaloneProps) {
           <div className="py-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
               <Link 
-                href={`/api-hub/${slug}`}
+                href={`/${slug}`}
                 className="text-sm text-zinc-300 hover:text-white transition-colors"
               >
                 ← Back to {title}
