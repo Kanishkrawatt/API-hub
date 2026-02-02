@@ -14,6 +14,7 @@ export function SiteHeader() {
             alt="Requestly"
             width={120}
             height={32}
+            unoptimized
             className="h-8 w-auto dark:hidden"
           />
           <Image
@@ -21,6 +22,7 @@ export function SiteHeader() {
             alt="Requestly"
             width={120}
             height={32}
+            unoptimized
             className="h-8 w-auto hidden dark:block"
           />
         </Link>

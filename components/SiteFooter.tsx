@@ -15,6 +15,7 @@ export function SiteFooter() {
                 alt="Requestly"
                 width={140}
                 height={36}
+                unoptimized
                 className="h-9 w-auto dark:hidden"
               />
               <Image
@@ -22,6 +23,7 @@ export function SiteFooter() {
                 alt="Requestly"
                 width={140}
                 height={36}
+                unoptimized
                 className="h-9 w-auto hidden dark:block"
               />
             </Link>
