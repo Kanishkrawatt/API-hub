@@ -10,7 +10,7 @@ export function SiteHeader() {
       <Container className="flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/requestly-logo-light.avif"
+            src="/api-hub/requestly-logo-light.avif"
             alt="Requestly"
             width={120}
             height={32}
@@ -18,7 +18,7 @@ export function SiteHeader() {
             className="h-8 w-auto dark:hidden"
           />
           <Image
-            src="/requestly-logo-dark.avif"
+            src="/api-hub/requestly-logo-dark.avif"
             alt="Requestly"
             width={120}
             height={32}
