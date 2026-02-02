@@ -188,14 +188,14 @@ export default async function CategoryPage({
                       <div className="flex items-center justify-between gap-2 pt-2">
                         {hasOpenApiSpec(api.slug) && (
                           <Link
-                            href={`/api-hub/${api.slug}/reference`}
+                            href={`/${api.slug}/reference`}
                             className="inline-flex items-center rounded-md border border-border px-3 py-1.5 text-[11px] font-semibold text-foreground transition hover:-translate-y-0.5 hover:bg-muted"
                           >
                             API Reference
                           </Link>
                         )}
                         <Link
-                          href={`/api-hub/${api.slug}`}
+                          href={`/${api.slug}`}
                           className="ml-auto inline-flex items-center rounded-md bg-muted px-3 py-1.5 text-[11px] font-semibold text-foreground transition hover:-translate-y-0.5 hover:bg-accent"
                         >
                           View details -&gt;
