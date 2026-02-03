@@ -86,16 +86,11 @@ export function CategoryCarousel({ categories }: CategoryCarouselProps) {
                     <CardDescription>{c.description}</CardDescription>
                   ) : null}
                 </CardHeader>
-                {/* <CardContent className="relative mt-auto flex items-center justify-between text-xs text-muted-foreground pb-5">
-                  <span>Category page</span>
-                  <span className="text-foreground">→</span>
-                </CardContent> */}
               </Card>
             </Link>
         ))}
       </div>
 
-      {/* Hide scrollbar globally for this component */}
       <style jsx>{`
         .scrollbar-hide::-webkit-scrollbar {
           display: none;

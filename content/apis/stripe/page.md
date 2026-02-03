@@ -1,12 +1,10 @@
 ---
 title: Stripe API
 product_name: Stripe
-logo: /api-hub/logos/stripe.png
+logo: /api-hub/api-hub/logos/stripe.png
 category: payments
-category_title: Payments & Billing
-category_description: >-
-  Payment processing, subscription management, and financial infrastructure APIs
-  for modern businesses
+category_title: Payment & Billing APIs
+category_description: Integrate secure payment processing, subscription management, and billing automation into your applications.
 category_gradient: from-emerald-500/15 to-emerald-500/5
 category_badge_dark: bg-emerald-950/50 text-emerald-400 border-emerald-800/30
 category_badge_light: bg-emerald-100 text-emerald-700 border-emerald-300

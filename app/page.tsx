@@ -1,11 +1,8 @@
-import Link from "next/link";
-import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Container } from "@/components/Container";
 import { getAllApis, getAllCategories, getCategoryBySlug, hasOpenApiSpec } from "@/lib/content/fs";
 import { CategoryCarousel } from "@/components/CategoryCarousel.client";
-import { ApiInfiniteScroll } from "@/components/ApiInfiniteScroll.client";
+import { ApiList } from "@/components/ApiList.client";
 
 export const revalidate = 3600;
 
@@ -38,6 +35,7 @@ export default async function ApiHubIndexPage() {
           description: api.frontmatter.description,
           category: api.frontmatter.category,
           logo: api.frontmatter.logo,
+          popularity_score: api.frontmatter.popularity_score,
         },
         colors: {
           gradient: categoryEntry?.frontmatter.gradient ?? "from-zinc-500/15 to-zinc-500/5",
@@ -88,18 +86,7 @@ export default async function ApiHubIndexPage() {
           <CategoryCarousel categories={categoriesWithTitles} />
         </section>
 
-        <section className="mt-12 space-y-4">
-          <div className="flex items-end justify-between gap-3 px-2">
-            <div>
-              <h2 className="text-lg font-semibold text-foreground">All APIs</h2>
-              <div className="text-sm text-muted-foreground">{apis.length} total</div>
-            </div>
-            <Badge variant="secondary">
-              Sorted A-Z
-            </Badge>
-          </div>
-          <ApiInfiniteScroll apis={apisWithMetadata} itemsPerPage={6} />
-        </section>
+        <ApiList apis={apisWithMetadata} />
       </Container>
     </main>
   );

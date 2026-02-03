@@ -13,6 +13,7 @@ type ApiItem = {
     description: string;
     category: string;
     logo?: string;
+    popularity_score?: number;
   };
   colors: {
     gradient: string;
@@ -102,7 +103,7 @@ export function ApiInfiniteScroll({ apis, itemsPerPage = 20 }: Props) {
                   {api.frontmatter.category}
                 </Badge>
               </div>
-              <CardHeader className="relative pb-2 pr-24 space-y-2">
+              <CardHeader className="relative pb-2 pr-20 space-y-2">
                 <div className="flex items-center gap-3">
                   {api.frontmatter.logo && (
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white p-2">

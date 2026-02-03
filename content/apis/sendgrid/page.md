@@ -3,22 +3,31 @@ title: SendGrid API
 product_name: SendGrid
 logo: /api-hub/logos/sendgrid.png
 category: communication
+category_title: Communication & Messaging
+category_description: >-
+  Integrate messaging, chat, and communication features into your applications
+  with APIs for WhatsApp, Instagram, SMS, and more.
 category_gradient: from-blue-500/15 to-blue-500/5
 category_badge_dark: bg-blue-950/50 text-blue-400 border-blue-800/30
 category_badge_light: bg-blue-100 text-blue-700 border-blue-300
 primary_keyword: SendGrid API
 secondary_keywords:
   - Email API
-  - transactional email
-  - email delivery
+  - Transactional Email API
+  - Email Delivery API
+  - SMTP API
 description: >-
-  Email delivery service with robust APIs for sending transactional and
-  marketing emails.
+  Send transactional and marketing emails at scale with SendGrid's reliable
+  email delivery API. Track opens, clicks, and deliverability.
 pricing_free_tier: true
-pricing_starting_from: $0 (100 emails/day free)
-pricing_notes: Free tier includes 100 emails per day; paid plans available.
+pricing_starting_from: Free (100 emails/day)
+pricing_notes: >-
+  Free tier 100 emails/day. Essentials from $19.95/month (50K emails), Pro from
+  $89.95/month (100K emails).
 auth_type: api_key
-rate_limits: Based on plan; see docs.
+rate_limits: >-
+  Based on plan; no strict rate limits but fair use expected. Email limits per
+  tier.
 docs_url: 'https://docs.sendgrid.com'
 pricing_url: 'https://sendgrid.com/pricing'
 alternatives:
@@ -28,26 +37,45 @@ alternatives:
     docs_url: 'https://docs.aws.amazon.com/ses'
   - name: Postmark
     docs_url: 'https://postmarkapp.com/developer'
-last_verified_date: '2026-01-15'
-popularity_score: 78
+last_verified_date: '2026-02-03'
+popularity_score: 85
 faq:
-  - q: Is there a free tier?
-    a: 'Yes, SendGrid offers 100 free emails per day forever.'
-  - q: How do I authenticate?
-    a: Use an API key in the Authorization header.
+  - q: Is SendGrid API free?
+    a: >-
+      Yes, free tier includes 100 emails/day forever. Paid plans start at
+      $19.95/month for 50,000 emails.
+  - q: Can I send marketing emails?
+    a: >-
+      Yes, SendGrid supports both transactional and marketing emails with
+      templates, scheduling, and segmentation.
+  - q: How do I track email opens?
+    a: >-
+      Enable open and click tracking in settings. SendGrid automatically tracks
+      opens, clicks, bounces, and spam reports.
+  - q: What's the delivery rate?
+    a: >-
+      Industry-leading 99%+ deliverability. Includes spam testing, sender
+      authentication, and reputation monitoring.
 auth_setup_steps:
-  - Create a SendGrid account
-  - Go to Settings > API Keys
-  - Click 'Create API Key'
-  - Choose permissions and generate
-  - Store the key securely and use in Authorization header
+  - Create SendGrid account at sendgrid.com
+  - Verify your email address
+  - Go to Settings > API Keys in dashboard
+  - Click Create API Key
+  - Choose Full Access or Restricted Access
+  - Name and generate the key
+  - Copy and secure the API key immediately
+  - Use in Authorization Bearer header
 ---
 
-SendGrid provides email delivery infrastructure with APIs for sending, tracking, and analyzing email campaigns.
+SendGrid is a leading cloud-based email delivery platform trusted by over 80,000 customers. Send transactional and marketing emails at scale with reliable infrastructure, detailed analytics, and deliverability tools.
 
 ### What you can build
 
-- Transactional email systems
-- Email marketing campaigns
+- Transactional email systems (receipts, confirmations)
+- Marketing campaign platforms
 - Automated email workflows
 - Email analytics dashboards
+- Password reset and notifications
+- Newsletter distribution systems
+- Email verification services
+- Customer communication tools
