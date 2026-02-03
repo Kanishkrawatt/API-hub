@@ -2,14 +2,14 @@
 title: HubSpot API
 product_name: HubSpot
 logo: /api-hub/logos/hubspot.png
-category: data
-category_title: Data & Analytics
+category: business
+category_title: Business & CRM
 category_description: >-
-  Access rich data sources including maps, music catalogs, analytics, and more
-  to power your data-driven applications.
-category_gradient: from-orange-500/15 to-orange-500/5
-category_badge_dark: bg-orange-950/50 text-orange-400 border-orange-800/30
-category_badge_light: bg-orange-100 text-orange-700 border-orange-300
+  Enterprise APIs for CRM, project management, e-commerce, and business
+  automation platforms.
+category_gradient: from-indigo-500/15 to-indigo-500/5
+category_badge_dark: bg-indigo-950/50 text-indigo-400 border-indigo-800/30
+category_badge_light: bg-indigo-100 text-indigo-700 border-indigo-300
 primary_keyword: HubSpot API
 secondary_keywords:
   - CRM API

@@ -2,14 +2,13 @@
 title: OpenWeather API
 product_name: OpenWeather
 logo: /api-hub/logos/openweather.png
-category: data
-category_title: Data & Analytics
+category: maps
+category_title: Maps & Location
 category_description: >-
-  Access rich data sources including maps, music catalogs, analytics, and more
-  to power your data-driven applications.
-category_gradient: from-sky-500/15 to-sky-500/5
-category_badge_dark: bg-sky-950/50 text-sky-400 border-sky-800/30
-category_badge_light: bg-sky-100 text-sky-700 border-sky-300
+  APIs for mapping, geolocation, weather data, and location-based services.
+category_gradient: from-green-500/15 to-green-500/5
+category_badge_dark: bg-green-950/50 text-green-400 border-green-800/30
+category_badge_light: bg-green-100 text-green-700 border-green-300
 primary_keyword: OpenWeather API
 secondary_keywords:
   - Weather API

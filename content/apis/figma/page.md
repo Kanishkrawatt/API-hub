@@ -2,14 +2,14 @@
 title: Figma API
 product_name: Figma
 logo: /api-hub/logos/figma.png
-category: data
-category_title: Data & Analytics
+category: developer-tools
+category_title: Developer Tools
 category_description: >-
-  Access rich data sources including maps, music catalogs, analytics, and more
-  to power your data-driven applications.
-category_gradient: from-purple-500/15 to-purple-500/5
-category_badge_dark: bg-purple-950/50 text-purple-400 border-purple-800/30
-category_badge_light: bg-purple-100 text-purple-700 border-purple-300
+  APIs for code repositories, version control, design tools, and developer
+  productivity platforms.
+category_gradient: from-slate-500/15 to-slate-500/5
+category_badge_dark: bg-slate-950/50 text-slate-400 border-slate-800/30
+category_badge_light: bg-slate-100 text-slate-700 border-slate-300
 primary_keyword: Figma API
 secondary_keywords:
   - Design API

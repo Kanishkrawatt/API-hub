@@ -2,14 +2,14 @@
 title: Brave Search API
 product_name: Brave Search
 logo: /api-hub/logos/brave-search.png
-category: data
-category_title: Data & Analytics
+category: search
+category_title: Search & SEO
 category_description: >-
-  Access rich data sources including maps, music catalogs, analytics, and more
-  to power your data-driven applications.
-category_gradient: from-orange-500/15 to-orange-500/5
-category_badge_dark: bg-orange-950/50 text-orange-400 border-orange-800/30
-category_badge_light: bg-orange-100 text-orange-700 border-orange-300
+  APIs for web search, SEO analytics, keyword research, and search engine
+  integration.
+category_gradient: from-amber-500/15 to-amber-500/5
+category_badge_dark: bg-amber-950/50 text-amber-400 border-amber-800/30
+category_badge_light: bg-amber-100 text-amber-700 border-amber-300
 primary_keyword: Brave Search API
 secondary_keywords:
   - Web Search API

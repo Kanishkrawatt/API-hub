@@ -2,14 +2,14 @@
 title: Google Sheets API
 product_name: Google Sheets
 logo: /api-hub/logos/google-sheets.png
-category: data
-category_title: Data & Analytics
+category: productivity
+category_title: Cloud & Productivity
 category_description: >-
-  Access rich data sources including maps, music catalogs, analytics, and more
-  to power your data-driven applications.
-category_gradient: from-green-500/15 to-green-500/5
-category_badge_dark: bg-green-950/50 text-green-400 border-green-800/30
-category_badge_light: bg-green-100 text-green-700 border-green-300
+  APIs for cloud storage, spreadsheets, calendars, and productivity tools from
+  Google Workspace and beyond.
+category_gradient: from-blue-500/15 to-blue-500/5
+category_badge_dark: bg-blue-950/50 text-blue-400 border-blue-800/30
+category_badge_light: bg-blue-100 text-blue-700 border-blue-300
 primary_keyword: Google Sheets API
 secondary_keywords:
   - Spreadsheet API

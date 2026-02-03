@@ -2,11 +2,11 @@
 title: Google Calendar API
 product_name: Google Calendar
 logo: /api-hub/logos/google-calendar.png
-category: data
-category_title: Data & Analytics
+category: productivity
+category_title: Cloud & Productivity
 category_description: >-
-  Access rich data sources including maps, music catalogs, analytics, and more
-  to power your data-driven applications.
+  APIs for cloud storage, spreadsheets, calendars, and productivity tools from
+  Google Workspace and beyond.
 category_gradient: from-blue-500/15 to-blue-500/5
 category_badge_dark: bg-blue-950/50 text-blue-400 border-blue-800/30
 category_badge_light: bg-blue-100 text-blue-700 border-blue-300

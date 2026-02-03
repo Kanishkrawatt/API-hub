@@ -2,14 +2,14 @@
 title: YouTube Data API
 product_name: YouTube
 logo: /api-hub/logos/youtube.png
-category: data
-category_title: Data & Analytics
+category: media
+category_title: Media & Content
 category_description: >-
-  Access rich data sources including maps, music catalogs, analytics, and more
-  to power your data-driven applications.
-category_gradient: from-red-500/15 to-red-500/5
-category_badge_dark: bg-red-950/50 text-red-400 border-red-800/30
-category_badge_light: bg-red-100 text-red-700 border-red-300
+  APIs for video platforms, music streaming, photography, content management,
+  and social media content.
+category_gradient: from-pink-500/15 to-pink-500/5
+category_badge_dark: bg-pink-950/50 text-pink-400 border-pink-800/30
+category_badge_light: bg-pink-100 text-pink-700 border-pink-300
 primary_keyword: YouTube API
 secondary_keywords:
   - YouTube Data API

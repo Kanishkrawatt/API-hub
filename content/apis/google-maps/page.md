@@ -2,14 +2,13 @@
 title: Google Maps API
 product_name: Google Maps
 logo: /api-hub/logos/google-maps.png
-category: data
-category_title: Data & Analytics
+category: maps
+category_title: Maps & Location
 category_description: >-
-  Access rich data sources including maps, music catalogs, analytics, and more
-  to power your data-driven applications.
-category_gradient: from-red-500/15 to-red-500/5
-category_badge_dark: bg-red-950/50 text-red-400 border-red-800/30
-category_badge_light: bg-red-100 text-red-700 border-red-300
+  APIs for mapping, geolocation, weather data, and location-based services.
+category_gradient: from-green-500/15 to-green-500/5
+category_badge_dark: bg-green-950/50 text-green-400 border-green-800/30
+category_badge_light: bg-green-100 text-green-700 border-green-300
 primary_keyword: Google Maps API
 secondary_keywords:
   - Maps JavaScript API

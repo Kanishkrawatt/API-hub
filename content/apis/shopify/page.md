@@ -2,14 +2,14 @@
 title: Shopify API
 product_name: Shopify
 logo: /api-hub/logos/shopify.png
-category: data
-category_title: Data & Analytics
+category: business
+category_title: Business & CRM
 category_description: >-
-  Access rich data sources including maps, music catalogs, analytics, and more
-  to power your data-driven applications.
-category_gradient: from-green-500/15 to-green-500/5
-category_badge_dark: bg-green-950/50 text-green-400 border-green-800/30
-category_badge_light: bg-green-100 text-green-700 border-green-300
+  Enterprise APIs for CRM, project management, e-commerce, and business
+  automation platforms.
+category_gradient: from-indigo-500/15 to-indigo-500/5
+category_badge_dark: bg-indigo-950/50 text-indigo-400 border-indigo-800/30
+category_badge_light: bg-indigo-100 text-indigo-700 border-indigo-300
 primary_keyword: Shopify API
 secondary_keywords:
   - E-commerce API

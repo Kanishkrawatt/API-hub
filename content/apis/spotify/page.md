@@ -2,14 +2,14 @@
 title: Spotify Web API
 product_name: Spotify
 logo: /api-hub/logos/spotify.png
-category: data
-category_title: Data & Analytics
+category: media
+category_title: Media & Content
 category_description: >-
-  Access rich data sources including maps, music catalogs, analytics, and more
-  to power your data-driven applications.
-category_gradient: from-green-500/15 to-green-500/5
-category_badge_dark: bg-green-950/50 text-green-400 border-green-800/30
-category_badge_light: bg-green-100 text-green-700 border-green-300
+  APIs for video platforms, music streaming, photography, content management,
+  and social media content.
+category_gradient: from-pink-500/15 to-pink-500/5
+category_badge_dark: bg-pink-950/50 text-pink-400 border-pink-800/30
+category_badge_light: bg-pink-100 text-pink-700 border-pink-300
 primary_keyword: Spotify API
 secondary_keywords:
   - Spotify Web API

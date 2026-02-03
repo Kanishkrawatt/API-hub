@@ -2,14 +2,14 @@
 title: Steam Web API
 product_name: Steam
 logo: /api-hub/logos/steam.png
-category: data
-category_title: Data & Analytics
+category: media
+category_title: Media & Content
 category_description: >-
-  Access rich data sources including maps, music catalogs, analytics, and more
-  to power your data-driven applications.
-category_gradient: from-slate-500/15 to-slate-500/5
-category_badge_dark: bg-slate-950/50 text-slate-400 border-slate-800/30
-category_badge_light: bg-slate-100 text-slate-700 border-slate-300
+  APIs for video platforms, music streaming, photography, content management,
+  and social media content.
+category_gradient: from-pink-500/15 to-pink-500/5
+category_badge_dark: bg-pink-950/50 text-pink-400 border-pink-800/30
+category_badge_light: bg-pink-100 text-pink-700 border-pink-300
 primary_keyword: Steam API
 secondary_keywords:
   - Steam Web API

@@ -2,14 +2,14 @@
 title: GitLab API
 product_name: GitLab
 logo: /api-hub/logos/gitlab.png
-category: data
-category_title: Data & Analytics
+category: developer-tools
+category_title: Developer Tools
 category_description: >-
-  Access rich data sources including maps, music catalogs, analytics, and more
-  to power your data-driven applications.
-category_gradient: from-orange-500/15 to-orange-500/5
-category_badge_dark: bg-orange-950/50 text-orange-400 border-orange-800/30
-category_badge_light: bg-orange-100 text-orange-700 border-orange-300
+  APIs for code repositories, version control, design tools, and developer
+  productivity platforms.
+category_gradient: from-slate-500/15 to-slate-500/5
+category_badge_dark: bg-slate-950/50 text-slate-400 border-slate-800/30
+category_badge_light: bg-slate-100 text-slate-700 border-slate-300
 primary_keyword: GitLab API
 secondary_keywords:
   - Git Repository API

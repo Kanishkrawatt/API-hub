@@ -64,9 +64,7 @@ export default async function ApiHubIndexPage() {
             </div>
             <h1 className="text-3xl font-semibold tracking-tight text-foreground">Discover APIs by category</h1>
             <p className="max-w-3xl text-muted-foreground">
-              Markdown-powered, SEO-first API discovery. Categories, comparison pages, and structured
-              frontmatter for pricing, auth, and docs links.
-            </p>
+              Explore a curated directory of widely used APIs across data, AI, payments, messaging, and developer tools. Get essential details like authentication methods, pricing, free tiers, use cases, and direct links to official documentation, all in one place.</p>
             <div className="flex flex-wrap gap-3 pt-1 text-sm text-muted-foreground">
               <Badge variant="secondary">
                 {categories.length} categories

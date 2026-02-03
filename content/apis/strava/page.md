@@ -2,14 +2,14 @@
 title: Strava API
 product_name: Strava
 logo: /api-hub/logos/strava.png
-category: data
-category_title: Data & Analytics
+category: media
+category_title: Media & Content
 category_description: >-
-  Access rich data sources including maps, music catalogs, analytics, and more
-  to power your data-driven applications.
-category_gradient: from-orange-500/15 to-orange-500/5
-category_badge_dark: bg-orange-950/50 text-orange-400 border-orange-800/30
-category_badge_light: bg-orange-100 text-orange-700 border-orange-300
+  APIs for video platforms, music streaming, photography, content management,
+  and social media content.
+category_gradient: from-pink-500/15 to-pink-500/5
+category_badge_dark: bg-pink-950/50 text-pink-400 border-pink-800/30
+category_badge_light: bg-pink-100 text-pink-700 border-pink-300
 primary_keyword: Strava API
 secondary_keywords:
   - Fitness API

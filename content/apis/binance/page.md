@@ -2,14 +2,14 @@
 title: Binance API
 product_name: Binance
 logo: /api-hub/logos/binance.png
-category: data
-category_title: Data & Analytics
+category: payments
+category_title: Finance & Payments
 category_description: >-
-  Access rich data sources including maps, music catalogs, analytics, and more
-  to power your data-driven applications.
-category_gradient: from-yellow-500/15 to-yellow-500/5
-category_badge_dark: bg-yellow-950/50 text-yellow-400 border-yellow-800/30
-category_badge_light: bg-yellow-100 text-yellow-700 border-yellow-300
+  Integrate secure payment processing, cryptocurrency trading, and financial
+  services into your applications.
+category_gradient: from-emerald-500/15 to-emerald-500/5
+category_badge_dark: bg-emerald-950/50 text-emerald-400 border-emerald-800/30
+category_badge_light: bg-emerald-100 text-emerald-700 border-emerald-300
 primary_keyword: Binance API
 secondary_keywords:
   - Crypto API

@@ -2,14 +2,14 @@
 title: Google Drive API
 product_name: Google Drive
 logo: /api-hub/logos/google-drive.png
-category: data
-category_title: Data & Analytics
+category: productivity
+category_title: Cloud & Productivity
 category_description: >-
-  Access rich data sources including maps, music catalogs, analytics, and more
-  to power your data-driven applications.
-category_gradient: from-yellow-500/15 to-yellow-500/5
-category_badge_dark: bg-yellow-950/50 text-yellow-400 border-yellow-800/30
-category_badge_light: bg-yellow-100 text-yellow-700 border-yellow-300
+  APIs for cloud storage, spreadsheets, calendars, and productivity tools from
+  Google Workspace and beyond.
+category_gradient: from-blue-500/15 to-blue-500/5
+category_badge_dark: bg-blue-950/50 text-blue-400 border-blue-800/30
+category_badge_light: bg-blue-100 text-blue-700 border-blue-300
 primary_keyword: Google Drive API
 secondary_keywords:
   - Cloud Storage API
