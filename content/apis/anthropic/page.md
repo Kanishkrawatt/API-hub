@@ -1,7 +1,7 @@
 ---
 title: Anthropic API
 product_name: Anthropic
-logo: /api-hub/api-hub/logos/anthropic.png
+logo: /api-hub/logos/anthropic.png
 category: ai
 category_title: AI & Machine Learning
 category_description: Access powerful artificial intelligence and machine learning models for text generation, image analysis, code completion, and more.
