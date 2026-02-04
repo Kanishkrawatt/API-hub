@@ -1,7 +1,7 @@
 ---
 title: Figma API
 product_name: Figma
-logo: /api-hub/logos/figma.png
+logo: /api-explorer/logos/figma.png
 category: developer-tools
 category_title: Developer Tools
 category_description: >-

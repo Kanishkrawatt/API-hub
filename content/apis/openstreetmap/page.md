@@ -1,7 +1,7 @@
 ---
 title: OpenStreetMap API
 product_name: OpenStreetMap
-logo: /api-hub/logos/openstreetmap.png
+logo: /api-explorer/logos/openstreetmap.png
 category: maps
 category_title: Maps & Location
 category_description: >-

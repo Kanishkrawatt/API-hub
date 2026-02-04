@@ -1,7 +1,7 @@
 ---
 title: Salesforce API
 product_name: Salesforce
-logo: /api-hub/logos/salesforce.png
+logo: /api-explorer/logos/salesforce.png
 category: business
 category_title: Business & CRM
 category_description: >-

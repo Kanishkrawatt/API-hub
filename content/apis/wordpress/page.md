@@ -1,7 +1,7 @@
 ---
 title: WordPress API
 product_name: WordPress
-logo: /api-hub/logos/wordpress.png
+logo: /api-explorer/logos/wordpress.png
 category: media
 category_title: Media & Content
 category_description: >-

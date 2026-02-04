@@ -1,7 +1,7 @@
 ---
 title: Instagram API
 product_name: Instagram
-logo: /api-hub/logos/instagram.png
+logo: /api-explorer/logos/instagram.png
 category: communication
 category_title: Communication & Messaging
 category_description: >-

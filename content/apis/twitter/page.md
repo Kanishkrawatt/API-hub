@@ -1,7 +1,7 @@
 ---
 title: Twitter API (X API)
 product_name: Twitter
-logo: /api-hub/logos/twitter.png
+logo: /api-explorer/logos/twitter.png
 category: communication
 category_title: Communication & Messaging
 category_description: >-

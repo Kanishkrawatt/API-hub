@@ -1,7 +1,7 @@
 ---
 title: SendGrid API
 product_name: SendGrid
-logo: /api-hub/logos/sendgrid.png
+logo: /api-explorer/logos/sendgrid.png
 category: communication
 category_title: Communication & Messaging
 category_description: >-

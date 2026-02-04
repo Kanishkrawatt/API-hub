@@ -1,7 +1,7 @@
 ---
 title: TikTok API
 product_name: TikTok
-logo: /api-hub/logos/tiktok.png
+logo: /api-explorer/logos/tiktok.png
 category: communication
 category_title: Communication & Messaging
 category_description: >-

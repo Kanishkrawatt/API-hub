@@ -1,7 +1,7 @@
 ---
 title: Google Maps API
 product_name: Google Maps
-logo: /api-hub/logos/google-maps.png
+logo: /api-explorer/logos/google-maps.png
 category: maps
 category_title: Maps & Location
 category_description: >-

@@ -1,7 +1,7 @@
 ---
 title: Mistral API
 product_name: Mistral AI
-logo: /api-hub/logos/mistral.png
+logo: /api-explorer/logos/mistral.png
 category: ai
 category_title: AI & Machine Learning
 category_description: >-

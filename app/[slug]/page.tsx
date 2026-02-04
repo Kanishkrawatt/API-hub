@@ -88,7 +88,7 @@ export default async function ApiDetailPage({
       <Container className="relative z-10">
         <JsonLd
           data={jsonLdBreadcrumbs([
-            { name: "API Hub", url: "/api-hub" },
+            { name: "API Explorer", url: "/api-explorer" },
             { name: frontmatter.category, url: `/api-hub/category/${frontmatter.category}` },
             { name: frontmatter.title, url: `/api-hub/${slug}` },
           ])}
@@ -109,7 +109,7 @@ export default async function ApiDetailPage({
             <div className="flex-1">
               <div className="text-sm text-muted-foreground">
                 <Link href="/" className="hover:text-foreground">
-                  API Hub
+                  API Explorer
                 </Link>{" "}
                 /{" "}
                 <Link
@@ -301,7 +301,7 @@ export default async function ApiDetailPage({
                           href={`/${alt.slug}`}
                           className="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition"
                         >
-                          View in API Hub →
+                          View in API Explorer →
                         </Link>
                       ) : alt.docsUrl ? (
                         <a

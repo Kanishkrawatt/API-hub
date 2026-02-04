@@ -1,7 +1,7 @@
 ---
 title: OpenAI API
 product_name: OpenAI
-logo: /api-hub/logos/openai.png
+logo: /api-explorer/logos/openai.png
 category: ai
 category_title: AI & Machine Learning
 category_description: >-

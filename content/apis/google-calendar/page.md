@@ -1,7 +1,7 @@
 ---
 title: Google Calendar API
 product_name: Google Calendar
-logo: /api-hub/logos/google-calendar.png
+logo: /api-explorer/logos/google-calendar.png
 category: productivity
 category_title: Cloud & Productivity
 category_description: >-

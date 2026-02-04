@@ -1,7 +1,7 @@
 ---
 title: WhatsApp API
 product_name: WhatsApp
-logo: /api-hub/logos/whatsapp.png
+logo: /api-explorer/logos/whatsapp.png
 category: communication
 category_title: Communication & Messaging
 category_description: >-

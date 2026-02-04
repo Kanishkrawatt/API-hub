@@ -1,7 +1,7 @@
 ---
 title: Google Sheets API
 product_name: Google Sheets
-logo: /api-hub/logos/google-sheets.png
+logo: /api-explorer/logos/google-sheets.png
 category: productivity
 category_title: Cloud & Productivity
 category_description: >-

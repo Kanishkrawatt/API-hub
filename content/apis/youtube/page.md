@@ -1,7 +1,7 @@
 ---
 title: YouTube Data API
 product_name: YouTube
-logo: /api-hub/logos/youtube.png
+logo: /api-explorer/logos/youtube.png
 category: media
 category_title: Media & Content
 category_description: >-

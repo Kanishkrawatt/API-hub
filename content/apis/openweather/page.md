@@ -1,7 +1,7 @@
 ---
 title: OpenWeather API
 product_name: OpenWeather
-logo: /api-hub/logos/openweather.png
+logo: /api-explorer/logos/openweather.png
 category: maps
 category_title: Maps & Location
 category_description: >-

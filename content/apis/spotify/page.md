@@ -1,7 +1,7 @@
 ---
 title: Spotify Web API
 product_name: Spotify
-logo: /api-hub/logos/spotify.png
+logo: /api-explorer/logos/spotify.png
 category: media
 category_title: Media & Content
 category_description: >-

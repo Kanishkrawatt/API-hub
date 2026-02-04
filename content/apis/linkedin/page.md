@@ -1,7 +1,7 @@
 ---
 title: LinkedIn API
 product_name: LinkedIn
-logo: /api-hub/logos/linkedin.png
+logo: /api-explorer/logos/linkedin.png
 category: communication
 category_title: Communication & Messaging
 category_description: >-

@@ -1,7 +1,7 @@
 ---
 title: Google Drive API
 product_name: Google Drive
-logo: /api-hub/logos/google-drive.png
+logo: /api-explorer/logos/google-drive.png
 category: productivity
 category_title: Cloud & Productivity
 category_description: >-

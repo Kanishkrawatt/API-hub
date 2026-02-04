@@ -1,7 +1,7 @@
 ---
 title: Google Gemini API
 product_name: Google Gemini
-logo: /api-hub/logos/google-gemini.png
+logo: /api-explorer/logos/google-gemini.png
 category: ai
 category_title: AI & Machine Learning
 category_description: >-

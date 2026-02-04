@@ -1,7 +1,7 @@
 ---
 title: Ahrefs API
 product_name: Ahrefs
-logo: /api-hub/logos/ahrefs.png
+logo: /api-explorer/logos/ahrefs.png
 category: search
 category_title: Search & SEO
 category_description: >-

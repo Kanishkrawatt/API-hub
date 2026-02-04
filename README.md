@@ -1,4 +1,4 @@
-# API Hub (Next.js App Router) — GitHub Markdown CMS
+# API Explorer (Next.js App Router) — GitHub Markdown CMS
 
 This is a production-ready **SEO-first API discovery platform** where each API is a Markdown file with validated frontmatter.
 

@@ -17,11 +17,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "API Hub — SEO-first API Discovery",
-    template: "%s | API Hub",
+    default: "API Explorer | Discover and Compare APIs",
+    template: "%s | API Explorer",
   },
   description:
-    "An SEO-focused API Hub CMS powered by Markdown + frontmatter. Discover APIs by category, compare top picks, and read structured documentation.",
+    "Explore a curated directory of widely used APIs across data, AI, payments, messaging, and developer tools. Get essential details like authentication methods, pricing, free tiers, use cases, and official documentation links.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
 };
 
@@ -38,7 +38,7 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >

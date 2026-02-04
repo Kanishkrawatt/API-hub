@@ -1,7 +1,7 @@
 ---
 title: Slack API
 product_name: Slack
-logo: /api-hub/logos/slack.png
+logo: /api-explorer/logos/slack.png
 category: communication
 category_title: Communication & Messaging
 category_description: >-

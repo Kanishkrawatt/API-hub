@@ -79,7 +79,7 @@ export default async function CategoryPage({
       <Container className="relative z-10">
         <JsonLd
           data={jsonLdBreadcrumbs([
-            { name: "API Hub", url: "/api-hub" },
+            { name: "API Explorer", url: "/api-explorer" },
             { name: entry.frontmatter.title || category, url: `/api-hub/category/${category}` },
           ])}
         />
@@ -92,7 +92,7 @@ export default async function CategoryPage({
         <section className="rounded-b-3xl border-b border-border/60 bg-gradient-to-br from-background via-muted to-background p-8 pt-14 shadow-lg backdrop-blur-sm">
           <div className="text-sm text-muted-foreground">
             <Link href="/" className="hover:text-foreground">
-              API Hub
+              API Explorer
             </Link>{" "}
             / <span>{entry.frontmatter.title || category}</span>
           </div>

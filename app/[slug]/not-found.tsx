@@ -13,7 +13,7 @@ export default function ApiNotFound() {
           href="/api-hub"
           className="mt-6 inline-flex items-center rounded-full bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-800"
         >
-          Back to API Hub
+          Back to API Explorer
         </Link>
       </Container>
     </main>

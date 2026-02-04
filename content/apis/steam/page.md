@@ -1,7 +1,7 @@
 ---
 title: Steam Web API
 product_name: Steam
-logo: /api-hub/logos/steam.png
+logo: /api-explorer/logos/steam.png
 category: media
 category_title: Media & Content
 category_description: >-

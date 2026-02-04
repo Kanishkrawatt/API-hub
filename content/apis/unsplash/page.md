@@ -1,7 +1,7 @@
 ---
 title: Unsplash API
 product_name: Unsplash
-logo: /api-hub/logos/unsplash.png
+logo: /api-explorer/logos/unsplash.png
 category: media
 category_title: Media & Content
 category_description: >-

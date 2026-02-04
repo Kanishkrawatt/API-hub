@@ -1,7 +1,7 @@
 ---
 title: OpenRouter API
 product_name: OpenRouter
-logo: /api-hub/logos/openrouter.png
+logo: /api-explorer/logos/openrouter.png
 category: ai
 category_title: AI & Machine Learning
 category_description: >-

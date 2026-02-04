@@ -1,7 +1,7 @@
 ---
 title: Google Cloud Translation API
 product_name: Google Translate
-logo: /api-hub/logos/google-translate.png
+logo: /api-explorer/logos/google-translate.png
 category: ai
 category_title: AI & Machine Learning
 category_description: >-

@@ -1,7 +1,7 @@
 ---
 title: Twilio API
 product_name: Twilio
-logo: /api-hub/logos/twilio.png
+logo: /api-explorer/logos/twilio.png
 category: communication
 category_title: Communication & Messaging
 category_description: >-

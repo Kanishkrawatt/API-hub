@@ -1,7 +1,7 @@
 ---
 title: Reddit API
 product_name: Reddit
-logo: /api-hub/logos/reddit.png
+logo: /api-explorer/logos/reddit.png
 category: communication
 category_title: Communication & Messaging
 category_description: >-

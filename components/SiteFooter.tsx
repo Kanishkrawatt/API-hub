@@ -11,7 +11,7 @@ export function SiteFooter() {
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-4">
               <Image
-                src="/api-hub/requestly-logo-light.avif"
+                src="/api-explorer/requestly-logo-light.avif"
                 alt="Requestly"
                 width={140}
                 height={36}
@@ -19,7 +19,7 @@ export function SiteFooter() {
                 className="h-9 w-auto dark:hidden"
               />
               <Image
-                src="/api-hub/requestly-logo-dark.avif"
+                src="/api-explorer/requestly-logo-dark.avif"
                 alt="Requestly"
                 width={140}
                 height={36}

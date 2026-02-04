@@ -1,7 +1,7 @@
 ---
 title: HubSpot API
 product_name: HubSpot
-logo: /api-hub/logos/hubspot.png
+logo: /api-explorer/logos/hubspot.png
 category: business
 category_title: Business & CRM
 category_description: >-

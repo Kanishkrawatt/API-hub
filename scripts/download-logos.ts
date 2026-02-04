@@ -64,7 +64,7 @@ async function processMarkdownFile(apiSlug: string, filePath: string): Promise<v
   await downloadImage(logoUrl, logoFilePath);
 
   // Update the markdown file
-  const newLogoPath = `/logos/${logoFileName}`;
+  const newLogoPath = `/api-explorer/logos/${logoFileName}`;
   const updatedFrontmatter = { ...frontmatter, logo: newLogoPath };
   const updatedContent = matter.stringify(markdownContent, updatedFrontmatter);
   

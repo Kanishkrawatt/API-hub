@@ -1,7 +1,7 @@
 ---
 title: Strava API
 product_name: Strava
-logo: /api-hub/logos/strava.png
+logo: /api-explorer/logos/strava.png
 category: media
 category_title: Media & Content
 category_description: >-

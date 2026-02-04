@@ -1,7 +1,7 @@
 ---
 title: Google News API
 product_name: Google News
-logo: /api-hub/logos/google-news.png
+logo: /api-explorer/logos/google-news.png
 category: media
 category_title: Media & Content
 category_description: >-

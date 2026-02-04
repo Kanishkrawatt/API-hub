@@ -1,7 +1,7 @@
 ---
 title: Stripe API
 product_name: Stripe
-logo: /api-hub/logos/stripe.png
+logo: /api-explorer/logos/stripe.png
 category: payments
 category_title: Payment & Billing APIs
 category_description: Integrate secure payment processing, subscription management, and billing automation into your applications.

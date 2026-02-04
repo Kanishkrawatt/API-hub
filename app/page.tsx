@@ -60,19 +60,11 @@ export default async function ApiHubIndexPage() {
           <div className="flex flex-col gap-3">
             <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-              API Hub
+              API Explorer
             </div>
             <h1 className="text-3xl font-semibold tracking-tight text-foreground">Discover APIs by category</h1>
             <p className="max-w-3xl text-muted-foreground">
               Explore a curated directory of widely used APIs across data, AI, payments, messaging, and developer tools. Get essential details like authentication methods, pricing, free tiers, use cases, and direct links to official documentation, all in one place.</p>
-            <div className="flex flex-wrap gap-3 pt-1 text-sm text-muted-foreground">
-              <Badge variant="secondary">
-                {categories.length} categories
-              </Badge>
-              <Badge variant="secondary">
-                {apis.length} APIs
-              </Badge>
-            </div>
           </div>
         </section>
 

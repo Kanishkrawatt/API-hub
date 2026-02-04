@@ -1,7 +1,7 @@
 ---
 title: Perplexity API
 product_name: Perplexity
-logo: /api-hub/logos/perplexity.png
+logo: /api-explorer/logos/perplexity.png
 category: ai
 category_title: AI & Machine Learning
 category_description: >-

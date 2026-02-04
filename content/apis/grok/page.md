@@ -1,7 +1,7 @@
 ---
 title: Grok API
 product_name: Grok
-logo: /api-hub/logos/grok.png
+logo: /api-explorer/logos/grok.png
 category: ai
 category_title: AI & Machine Learning
 category_description: >-

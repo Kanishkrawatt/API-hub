@@ -1,7 +1,7 @@
 ---
 title: GitHub API
 product_name: GitHub
-logo: /api-hub/logos/github.png
+logo: /api-explorer/logos/github.png
 category: developer-tools
 category_title: Developer Tools
 category_description: APIs for code repositories, version control, design tools, and developer productivity platforms.

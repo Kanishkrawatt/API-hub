@@ -1,7 +1,7 @@
 ---
 title: GitHub Copilot API
 product_name: GitHub Copilot
-logo: /api-hub/logos/github-copilot.png
+logo: /api-explorer/logos/github-copilot.png
 category: ai
 category_title: AI & Machine Learning
 category_description: >-

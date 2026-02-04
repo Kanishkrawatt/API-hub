@@ -1,7 +1,7 @@
 ---
 title: Brave Search API
 product_name: Brave Search
-logo: /api-hub/logos/brave-search.png
+logo: /api-explorer/logos/brave-search.png
 category: search
 category_title: Search & SEO
 category_description: >-

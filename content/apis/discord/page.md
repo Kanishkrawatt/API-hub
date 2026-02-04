@@ -1,7 +1,7 @@
 ---
 title: Discord API
 product_name: Discord
-logo: /api-hub/logos/discord.png
+logo: /api-explorer/logos/discord.png
 category: communication
 category_title: Communication & Messaging
 category_description: >-

@@ -1,7 +1,7 @@
 ---
 title: Google Trends API
 product_name: Google Trends
-logo: /api-hub/logos/google-trends.png
+logo: /api-explorer/logos/google-trends.png
 category: productivity
 category_title: Cloud & Productivity
 category_description: >-

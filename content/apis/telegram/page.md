@@ -1,7 +1,7 @@
 ---
 title: Telegram Bot API
 product_name: Telegram
-logo: /api-hub/logos/telegram.png
+logo: /api-explorer/logos/telegram.png
 category: communication
 category_title: Communication & Messaging
 category_description: >-

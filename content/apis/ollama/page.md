@@ -1,7 +1,7 @@
 ---
 title: Ollama API
 product_name: Ollama
-logo: /api-hub/logos/ollama.png
+logo: /api-explorer/logos/ollama.png
 category: ai
 category_title: AI & Machine Learning
 category_description: >-

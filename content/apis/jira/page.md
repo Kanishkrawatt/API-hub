@@ -1,7 +1,7 @@
 ---
 title: Jira API
 product_name: Jira
-logo: /api-hub/logos/jira.png
+logo: /api-explorer/logos/jira.png
 category: business
 category_title: Business & CRM
 category_description: >-

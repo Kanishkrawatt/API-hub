@@ -1,7 +1,7 @@
 ---
 title: Binance API
 product_name: Binance
-logo: /api-hub/logos/binance.png
+logo: /api-explorer/logos/binance.png
 category: payments
 category_title: Finance & Payments
 category_description: >-

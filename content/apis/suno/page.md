@@ -1,7 +1,7 @@
 ---
 title: Suno API
 product_name: Suno
-logo: /api-hub/logos/suno.png
+logo: /api-explorer/logos/suno.png
 category: ai
 category_title: AI & Machine Learning
 category_description: >-

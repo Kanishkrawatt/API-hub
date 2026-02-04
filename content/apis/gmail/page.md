@@ -1,7 +1,7 @@
 ---
 title: Gmail API
 product_name: Gmail
-logo: /api-hub/logos/gmail.png
+logo: /api-explorer/logos/gmail.png
 category: communication
 category_title: Communication & Messaging
 category_description: >-

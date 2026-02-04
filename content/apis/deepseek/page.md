@@ -1,7 +1,7 @@
 ---
 title: DeepSeek API
 product_name: DeepSeek
-logo: /api-hub/logos/deepseek.png
+logo: /api-explorer/logos/deepseek.png
 category: ai
 category_title: AI & Machine Learning
 category_description: >-

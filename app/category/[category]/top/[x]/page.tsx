@@ -66,7 +66,7 @@ export default async function TopApisPage({
       <Container>
         <JsonLd
           data={jsonLdBreadcrumbs([
-            { name: "API Hub", url: "/api-hub" },
+            { name: "API Explorer", url: "/api-explorer" },
             { name: cat.frontmatter.title || category, url: `/api-hub/category/${category}` },
             { name: `Top ${count} APIs`, url: `/api-hub/${category}/top-${count}-apis` },
           ])}
@@ -80,7 +80,7 @@ export default async function TopApisPage({
         <div className="flex flex-col gap-2">
           <div className="text-sm text-zinc-500 dark:text-zinc-400">
             <Link href="/" className="hover:text-zinc-900 dark:hover:text-white">
-              API Hub
+              API Explorer
             </Link>{" "}
             /{" "}
             <Link

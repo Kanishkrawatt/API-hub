@@ -1,7 +1,7 @@
 ---
 title: GitLab API
 product_name: GitLab
-logo: /api-hub/logos/gitlab.png
+logo: /api-explorer/logos/gitlab.png
 category: developer-tools
 category_title: Developer Tools
 category_description: >-

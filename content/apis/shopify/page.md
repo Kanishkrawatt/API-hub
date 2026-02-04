@@ -1,7 +1,7 @@
 ---
 title: Shopify API
 product_name: Shopify
-logo: /api-hub/logos/shopify.png
+logo: /api-explorer/logos/shopify.png
 category: business
 category_title: Business & CRM
 category_description: >-

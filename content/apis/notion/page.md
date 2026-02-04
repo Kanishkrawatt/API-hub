@@ -1,7 +1,7 @@
 ---
 title: Notion API
 product_name: Notion
-logo: /api-hub/logos/notion.png
+logo: /api-explorer/logos/notion.png
 category: developer-tools
 category_title: Developer Tools
 category_description: APIs for code repositories, version control, design tools, and developer productivity platforms.
